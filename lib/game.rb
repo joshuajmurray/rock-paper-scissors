@@ -15,8 +15,14 @@ class Game
     return nil unless (left && right)
     if (left == :rock && right == :scissors)
       "Rock beats scissors!"
-    else
+    elsif (left == :scissors && right == :rock)
       "Rock beats scissors!"
+    elsif (left == :rock && right == :paper)
+      "Paper beats rock!"
+    elsif (left == :paper && right == :rock)
+      "Paper beats rock!"
+    else
+      :nothing
     end
   end
 
