@@ -81,7 +81,7 @@ describe 'A game of rock paper scissors' do
         game.start
         expect(game.play(:paper, :rock)).to eq("Paper beats rock!")
       end
-      
+
       it 'is finished' do
         game = Game.new
         game.start
@@ -96,9 +96,16 @@ describe 'A game of rock paper scissors' do
         game = Game.new
         game.start
         expect(game.play(:scissors, :paper)).to eq("Scissors vs paper!")
+        game.start
         expect(game.play(:paper, :scissors)).to eq("Scissors vs paper!")
       end
-      skip('is finished')
+
+      it 'is finished' do
+        game = Game.new
+        game.start
+        game.play(:scissors, :paper)
+        expect(game.started()).to eq(false)
+      end
     end
 
     context 'a tie game' do

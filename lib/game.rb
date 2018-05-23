@@ -21,14 +21,19 @@ class Game
       self.stop
       "Rock beats scissors!"
     elsif (left == :scissors && right == :rock)
+      self.stop
       "Rock beats scissors!"
     elsif (left == :rock && right == :paper)
+      self.stop
       "Paper beats rock!"
     elsif (left == :paper && right == :rock)
+      self.stop
       "Paper beats rock!"
     elsif (left == :scissors && right == :paper)
+      self.stop
       "Scissors vs paper!"
     elsif (left == :paper && right == :scissors)
+      self.stop
       "Scissors vs paper!"
     elsif (left == :scissors && right == :scissors)
       "Tie game. Try again!"
