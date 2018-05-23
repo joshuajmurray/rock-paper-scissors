@@ -116,6 +116,7 @@ describe 'A game of rock paper scissors' do
         expect(game.play(:paper, :paper)).to eq("Tie game. Try again!")
         expect(game.play(:rock, :rock)).to eq("Tie game. Try again!")
       end
+      
       it 'is not finished' do
         game = Game.new
         game.start
